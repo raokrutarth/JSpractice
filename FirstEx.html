@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta lang="en">
+<head> <title>javaScript Ex</title> </head>
+<SCRIPT TYPE="text/javascript">
+
+	function mouseFollow()
+	{
+		
+			var element = document.getElementById("drawArea");
+			var position = element.getContext("2d");
+			position.beginPath();
+			var e = document.onmousemove
+			position.moveTo(e.pageX, e.pageY);
+			position.lineTo(e.pageX, e.pageY);
+			position.stroke();
+		
+	}
+</SCRIPT>
+<STYLE TYPE="text/css">
+CANVAS
+{
+	background-color: red;
+}
+</STYLE>
+<body>
+	<CANVAS id=drawArea height=500 width=500 onClick=mouseFollow()>
+		
+	</CANVAS>
+</body>
